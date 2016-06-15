@@ -1,6 +1,6 @@
 # mobile-demo
    做完这个小项目大概前后花了3天的时间，中间其实还遇到蛮多问题的，现在来总结下问题的出现和解决方法，以及获得的经验。
-   最终效果图为:![image](https://github.com/wenwen1995/mobile-demo/screenshot/MobileImg.png)
+   最终效果图为:![image](https://github.com/wenwen1995/mobile-demo/blob/master/screenshot/MobileImg.png)
 1.问题1：如何让一个div处于一直垂直居中，不随浏览器大小的变化而移动位置？
   answer:对于一个有固定宽度的div,比如它的宽度为width:500px;此时再设置margin:0 auto;就可以实现。
   对于一个<div id="Content"></div>,它的position:absolute的话，有2种方法可以实现，方法1：
