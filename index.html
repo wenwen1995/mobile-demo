@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>三公冲榜拿银子</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+<div class="background clearfix">
+    <!-- 左侧内容 -->
+	<div class="left">
+		<div class="time">11月26日-12月5日</div>
+		<a class="btn"><img id="btnCenter" src="./images/btnCenter.png"></a>
+		<div class="match-info">
+			<p class="rankRole">【排名规则】</p>
+			<p class="notice">活动期间，在三公游戏中拿到三公，爆炸，爆玖等牌型的次数进行排名，前100名用户均可获得丰富奖励</p>
+			<img class="view" src="./images/view.png">
+			<p class="todayRank">今日名次：<span class="yellow">19582</span>,特殊牌型次数：<span class="yellow">58</span></p>
+			<a class="viewHistory" style="cursor:pointer;"><img src="./images/viewHistory.png"></a>
+		</div>
+	</div>
+
+	<!-- 右侧内容 -->
+	<div class="right">
+	<div class="rank-title clearfix">
+		<img class="rankFont" src="./images/rankFont.png">
+        <div class="select-input">
+        	今天
+        	<a class="tran" href="javascript:;"></a>
+        </div>
+        <!-- 下拉列表 -->
+        <div class="dropdown">
+        	<ul>
+        		<li>2016-06-10</li>
+        		<li class="active">2016-06-11</li>
+        		<li>2016-06-12</li>
+        		<li>2016-06-13</li>
+        	</ul>
+        </div>
+	</div>
+
+	<div>
+	   <!-- 排行榜排头 -->
+		<table class="title">
+		<thead>
+			<th>名次</th>
+			<th>用户昵称</th>
+			<th>特殊牌型次数</th>
+		</thead>
+		</table>
+
+		<table class="Table">
+		<tbody class="tablebody">
+		</tbody>
+</table>
+
+<div class="bottomBtn">
+	<a class="prev"><img src="./images/prev.png"><p class="page"><span id="currentPage"></span>/10</p></a>
+	<a class="next"><img src="./images/next.png"></a>
+</div>
+
+	</div>
+  </div>
+</div>
+
+
+<!-- 活动奖励 -->
+<div class="award">
+			<div class="mask"></div>
+				<div class="awardContent">
+					<div class="awardTitle">活动奖励</div>
+					<div class="close">X</div>
+					<div class="content">
+						<p>第一名：10万银子+织女服装</p>
+						<p>第二名：8万银子+嫦娥服装</p>
+						<p>第三名：5万银子+东海龙王服装</p>
+						<p>第4-10名：1万银子+型男达人服装</p>
+						<p>第11-30名：5000银子+黑色诱惑服装</p>
+						<p>第31-50名：2000银子</p>
+						<p>第51-100名：500银子</p>
+					</div>
+			</div>
+</div>
+
+<!-- 查看历史战绩 -->
+<div class="historyRecord">
+	<div class="mask"></div>
+		<div class="history-info">
+			<div class="historyTitle">历史战绩</div>
+			<div class="close">X</div>
+			<div >
+				<table class="historycontent">
+					<tbody>
+						<thead class="special" >
+							<th>日期</th>
+							<th>名次</th>
+							<th>奖励</th>
+							<th>领取</th>
+						</thead>
+						<tr>
+						    <td>2016-06-10</td>
+							<td>15280</td>
+							<td>无奖励</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td>2016-06-11</td>
+							<td>1547</td>
+							<td>10万银子+织女服装</td>
+							<td class="aa"><div class="take">领取</div></td>
+						</tr>
+						<tr>
+							<td>2016-06-12</td>
+							<td>41547</td>
+							<td>5万银子+东海龙王服装</td>
+							<td>已领取</td>
+						</tr>
+						<tr>
+							<td>2016-06-13</td>
+							<td>547</td>
+							<td>5000银子+黑色诱惑服装</td>
+						     <td><div class="take">领取</div></td>
+						</tr>
+						<tr>
+							<td>2016-06-14</td>
+							<td>157</td>
+							<td>2000银子</td>
+							<td>--</td>
+						</tr>
+						<tr>
+							<td>2016-06-15</td>
+							<td>15</td>
+							<td>无奖励</td>
+							<td>--</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+</div> 
+
+<script type="text/javascript" src="./scripts/jquery.min.js"></script>
+<script type="text/javascript" src="./scripts/page.js"></script>
+<script type="text/javascript" src="./scripts/jquery.js"></script>
+<script>
+ // 活动奖励的遮罩层和弹出框
+	$(document).ready(function(){
+		$('.btn').on('click',function(){
+           if($('.award').css('display')=='none'){
+           	$('.award').show();
+           	$('.close').on('click',function(){
+           		$('.award').hide();
+           	})
+           }
+		});
+	})
+
+// 历史战绩中点击领取后变成已领取状态
+ $(function(){
+ 	$('.viewHistory').on('click',function(){
+ 		if($('.historyRecord').css('display')=='none'){
+       	$('.historyRecord').show();
+         $('.take').each(function(){
+ 		$(this).on('click',function(){
+ 			$(this).removeClass('take').text('已领取');
+ 		})
+ 	})
+	 	$('.close').on('click',function(){
+	           		$('.historyRecord').hide();
+	  	})
+       }
+ 	})
+ })
+
+
+// 下拉列表每次hover后高亮显示
+	$(function(){
+	     $('.tran').click(function(){
+          $('.dropdown').toggle();
+          $('.dropdown>ul>li').mouseover(function(){
+          	$(this).addClass('active');
+          }).mouseout(function(){
+          	$(this).removeClass('active');
+          })
+		});
+	})
+	//点击上一页下一页后图标颜色变白
+	$(function(){
+		$('.prev').mouseover(function(){
+			$(this).find('img').attr({
+				'src': './images/prevHover.png'
+			}).mouseout(function(){
+				$('.prev').find('img').attr({
+				'src': './images/prev.png'
+
+			})
+		});
+	 });
+		$('.next').mouseover(function(){
+			$(this).find('img').attr({
+				'src': './images/nextHover.png'
+			}).mouseout(function(){
+				$('.next').find('img').attr({
+				'src': './images/next.png'
+			})
+		});
+	  })
+	});
+</script>
+</body>
+</html>

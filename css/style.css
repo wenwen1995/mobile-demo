@@ -1,0 +1,285 @@
+*{
+	margin:0;
+	padding: 0;
+	font-family: "Mircrosoft Yah";
+}
+.clearfix{*zoom: 1;}
+.clearfix:after{display: block;height: 0;clear: both;font-size: 0;content: "";}
+.background{
+    background:  url(../images/background.png) 0 0 no-repeat;
+	margin:0 auto;
+	width: 700px;
+	height:550px;
+	position: relative;
+}
+/*左侧内容*/
+.left{
+	width:380px;
+	height: 450px;
+	float: left;
+}
+.time{
+	width: 140px;
+	position: absolute;
+	top:167px;
+	left:228px;
+}
+.btn:hover{
+	cursor: pointer;
+}
+#btnCenter{
+	width:130px;
+	height:40px;
+	margin-top: 250px;
+	margin-left: 150px;
+	cursor: pointer;
+}
+.rankRole{
+	color: white;
+	text-indent: 4em;
+	width: 250px;
+}
+.notice{
+	width: 390px;
+	height:390px;
+	line-height: 25px;
+	word-break: break-all;
+	word-wrap: break-word;
+	font-size: 14px;
+	padding: 5px;
+	color: white;
+	margin: 10px 4px;
+}
+.view{
+  position: absolute;
+  margin:-355px 10px;
+}
+.todayRank{
+	width: 350px;
+	color: white;
+	font-size: 14px;
+	 position: absolute;
+	 margin:-347px 57px;
+}
+.yellow{
+	color: #d6ac40;
+}
+.viewHistory{
+	height: 27px;
+	position: absolute;
+	margin-top: -325px;
+	margin-left: 61px;
+	cursor: pointer;
+}
+/*右侧内容*/
+.right{
+	width: 320px;
+	height:440px;
+	position: relative;
+	float: left;
+	margin-left: 378px;
+	margin-top: -444px;
+	background: url(../images/rankBack.png) 0 0 no-repeat;
+}
+.rankFont{
+	float: left;
+	margin:13px 65px;
+}
+.select-input{
+	float: right;
+	top:-40px;
+	width: 150px;
+	height: 35px;
+	background-color: #ad600b;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	line-height: 35px;
+	color: white;
+	margin: -43px 16px;
+}
+/*下拉按钮*/
+.tran,.tran:hover{
+	width: 28px;
+	height:28px;
+	margin: 4px 84px;
+	cursor: pointer;
+	position: absolute;
+}
+.tran{
+	background: url(../images/btn.png) 0 0 no-repeat;
+}
+.tran:hover{
+	background: url(../images/btnHover.png) 0 0 no-repeat;
+}
+/*下拉列表*/
+.dropdown{
+  border: 1px solid #9b5100;
+  width: 150px;
+  position: absolute;
+  margin-top: 55px;
+  margin-left: 150px;
+  border-radius: 5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  display: none;
+
+}
+.dropdown ul li{
+   width: 150px;
+   height:30px;
+   line-height: 30px;
+   text-indent: 1em;
+   background: #ad600b;
+   border-bottom: 1px solid #9b5100;
+   list-style: none;
+}
+.active{
+	color: white;
+}
+.title{
+	width: 250px;
+	text-align: center;
+	margin:10px 55px;
+}
+.title th{
+	padding: 2px;
+	color: #572d00;
+}
+.Table{
+	width: 250px;
+	margin-left: 50px;
+	margin-top: -4px;
+}
+.tablebody{
+	color: white;
+}
+.tablebody tr td{
+	padding: 3px 16px;
+	height:20px;
+	line-height:20px;
+	border-bottom: 1px solid #c37621;
+}
+.circle{
+	width: 1px;
+	height: 20px;
+	background-color: #ffb749;
+	border-radius: 50%;
+	line-height: 20px;
+	text-align: center;
+	margin-left:-4px;
+	color: black;
+}
+
+.bottomBtn{
+	width:280px;
+	height:30px;
+}
+
+.prev,.next,.prev:hover,.next:hover{
+   width: 90px;
+   height:30px;
+   cursor: pointer;
+}
+.prev{
+	 float: left;
+	 margin-left: 52px;
+}
+.next{
+	float: right;
+}
+.page{
+	color:#9b5100;
+	margin: -26px 97px;
+}
+/*活动奖励*/
+.award{
+	display: none;
+}
+/*透明遮罩*/
+.mask{
+	display: block;
+	background-color:black;
+	opacity: 0.5; 
+	width: 700px;
+	height:449px;
+	margin:-550px auto;
+	filter:alpha(opacity=50);/*for ie opacity*/
+	-moz-opacity:0.5;
+}
+/*活动奖励弹出框*/
+.awardContent,.history-info{
+	position: absolute;/*使用绝对居中*/
+	top: 0; left: 0; bottom: 0; right: 0;
+	margin: 82px auto;
+	width: 480px;
+	height:260px;
+	border-radius: 5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+}
+.awardTitle,.historyTitle{
+	width: 475px;
+	height: 25px;
+	line-height: 25px;
+	color: #fff5e3;
+	padding: 4px;
+	background-color: #47320e;
+}
+
+.close{
+	color: #47320e;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #fff5e3;
+	float: right;
+	margin-top: -29px;
+	margin-right: 4px;
+	cursor: pointer;
+}
+.content,.historycontent{
+	background-color:  #fff5e3;
+	color: #552c00;
+}
+.content p{
+	height: 22px;
+	line-height: 22px;
+	border-bottom: 1px dotted lightgrey;
+	padding: 5px;
+	width: 430px;
+	margin-left: 20px;
+}
+/*历史战绩弹框*/
+.historyRecord{
+   display: none;
+}
+.special{
+	width: 90%;
+	background-color: #f2debc;
+	height:40px;
+	padding: 10px;
+
+}
+.historycontent{
+	width: 100%;
+	margin:0 auto;
+	text-align: center;
+}
+.historycontent tr td{
+	line-height: 30px;
+	height:30px;
+	border-bottom: 1px dotted lightgrey;
+}
+/*领取*/
+.take{
+	background-color: #4dad23;
+	border-radius: 3px;
+	width: 46px;
+	height: 20px;
+	line-height: 20px;
+	margin:0 auto;
+	cursor: pointer;
+}
